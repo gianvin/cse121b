@@ -4,9 +4,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Apply JavaScript example</title>
-  </head>
-  <body>
-    <button>Click me</button>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
   function createParagraph() {
@@ -22,5 +19,9 @@
   }
 });
 </script>
+  </head>
+  <body>
+    <button>Click me</button>
+    
   </body>
 </html>
