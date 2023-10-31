@@ -32,7 +32,18 @@ const profilePicture = "images/Gina Ong Photo.jpg";
 
 
 /* Step 5 - Array */
-
+{const favoriteFoods = ["Carbonara", "Kare-kare", "Adobo", "Sizzling Steak", "Fresh Lumpia", "Ramen"];
+ const foodElement = document.getElementById("food");
+ const foodList = favoriteFoods.join(",");
+ foodElement.textContent = `${foodList}`;
+ const anotherFood = "Pansit";
+ favoriteFoods.push(anotherFood);
+ foodElement.innerHTML += `<br>${favoriteFoods}`;
+ favoriteFoods.shift();
+ foodElement.innerHTML += `<br>${favoriteFoods}`;
+ favoriteFoods.pop();
+ foodElement.innerHTML += `<br>${favoriteFoods}`;
+}
 
 
 
