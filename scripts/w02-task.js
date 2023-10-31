@@ -4,8 +4,8 @@
 
 /* Step 2 - Variables */
 {const fullName = "Gina Ong";
-const currentYear = newDate().getFullYear();
-const profilePicture = "images/Gina Ong Photo.jpg";
+ const currentYear = new Date().getFullYear();
+ const profilePicture = "images/Gina Ong Photo.jpg";
 }
 
 
