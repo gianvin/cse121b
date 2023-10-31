@@ -21,7 +21,7 @@
 
 /* Step 4 - Adding Content */
 
-{nameElementinnerHTML = `<strong>${nameElement}</strong>`;
+{nameElement.innerHTML = `<strong>${nameElement}</strong>`;
  imageElement.setAttribute("src" , profilePicture);
  const fullName = "Gina Ong";
  const altText = `Profile image of ${fullName}`;
