@@ -21,9 +21,9 @@
 
 /* Step 4 - Adding Content */
 
-{nameElement.innerHTML = `string text${fullName}string text`;
+{nameElement.innerHTML = `<strong>${fullName}</strong>`;
+ yearElement.textContent = currentYear;
  imageElement.setAttribute("src" , profilePicture);
- const fullName = "Gina Ong";
  const altText = `Profile image of ${fullName}`;
  imageElement.setAttribute("alt", altText);
 }
