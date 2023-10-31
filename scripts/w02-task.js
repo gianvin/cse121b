@@ -3,6 +3,9 @@
 /* Step 1 - Setup type tasks - no code required */
 
 /* Step 2 - Variables */
+const fullName = "Gina Ong";
+const currentYear = newDate().getFullYear();
+const profilePicture = "images/Gina Ong Photo.jpg";
 
 
 
