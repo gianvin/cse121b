@@ -13,7 +13,7 @@
 /* Step 3 - Element Variables */
 {const nameElement = document.getElementById("name");
  const foodElement = document.getElementById("food");
- const yearElement = document.querySelector("year");
+ const yearElement = document.querySelector("#year");
  const imageElement = document.getElementById("Gina Ong Photo,jpg");
 }
 
