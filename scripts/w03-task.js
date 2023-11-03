@@ -28,17 +28,41 @@ function divide (dividend, divisor){
 }
 let divideNumber1 = Number(document.querySelector('#divide1').value);
 document.querySelector('#quotient').value = divide(divideNumber1, divideNumber2);
-document.querySelector('@divideNumbers').addEventListener('click', divideNumbers);
+document.querySelector('#divideNumbers').addEventListener('click', divideNumbers);
 /* Decision Structure */
 
 
 /* ARRAY METHODS - Functional Programming */
+let numbersArray = [1,2,3,4,5,6,7,8,9,10,11,12,13];
 /* Output Source Array */
-
+let arrayElement = document.getElementById("Array");
+arrayElement.innerHTML = numbersArray.join(', ')
 /* Output Odds Only Array */
-
+numbersArray.sort(function(a, b){
+    const isOdd = num => num % 2 === 1;
+    if (isOdd(a) && isOdd(b)) {
+        return a - b;
+    }   else if (isOdd(a)) {
+        return -1;
+    }   else if (isOdd(b)) {
+        return 1;
+    }   else {
+        return a - b;
+    }
+})
 /* Output Evens Only Array */
-
+numbersArray.sort(function(a, b){
+    const isEven = num => num % 2 === 1;
+    if (isEven(a) && isEven(b)) {
+        return a - b;
+    }   else if (isEven(a)) {
+        return -1;
+    }   else if (isEven(b)) {
+        return 1;
+    }   else {
+        return a - b;
+    }
+})
 /* Output Sum of Org. Array */
 
 /* Output Multiplied by 2 Array */
