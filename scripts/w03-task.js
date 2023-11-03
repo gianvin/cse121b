@@ -23,8 +23,12 @@ let multiplyNumber1 = Number(document.querySelector('#multiply1').value);
 document.querySelector('#product').value = multiply(multiplyNumber1, multiplyNumber2);
 document.querySelector('#multiplyNumbers').addEventListener('click', multiplyNumbers);
 /* Open Function Use - Divide Numbers */
-
-
+function divide (dividend, divisor){
+    return dividend / divisor;
+}
+let divideNumber1 = Number(document.querySelector('#divide1').value);
+document.querySelector('#quotient').value = divide(divideNumber1, divideNumber2);
+document.querySelector('@divideNumbers').addEventListener('click', divideNumbers);
 /* Decision Structure */
 
 
