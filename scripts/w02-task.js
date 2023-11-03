@@ -14,7 +14,7 @@
  const nameElement = document.getElementById("name");
  const foodElement = document.getElementById("food");
  const yearElement = document.querySelector("#year");
- const imageElement = document.getElementById("Gina Ong Photo,jpg");
+ const imageElement = document.querySelector("img");
 
 
 
@@ -23,7 +23,7 @@
 
  nameElement.innerHTML = `<string>${fullName}</string>`;
  yearElement.textContent = currentYear;
- imageElement.setAttribute("src",profilePicture);
+ imageElement.setAttribute('src', profilePicture);
  const altText = `Profile image of ${fullName}`;
  imageElement.setAttribute("alt", altText);
 
