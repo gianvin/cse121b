@@ -16,8 +16,12 @@ let subtractNumber1 = Number(document.querySelector('#subtract1').value);
 document.querySelector('#difference').value = subtract(subtractNumber1, subtractNumber2);
 document.querySelector('#subtractNumbers').addEventListener('click', subtractNumbers);
 /* Arrow Function - Multiply Numbers */
-
-
+function multiply (factor1, factor2){
+    return factor1 * factor2;
+}
+let multiplyNumber1 = Number(document.querySelector('#multiply1').value);
+document.querySelector('#product').value = multiply(multiplyNumber1, multiplyNumber2);
+document.querySelector('#multiplyNumbers').addEventListener('click', multiplyNumbers);
 /* Open Function Use - Divide Numbers */
 
 
