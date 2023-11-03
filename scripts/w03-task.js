@@ -2,8 +2,12 @@
 
 /* FUNCTIONS */
 /* Function Definition - Add Numbers */
-
-
+function add (number1, number2){
+    return number1 + number2;
+}
+let addNumber1 = Number(document.querySelector('#add1').value);
+document.querySelector('#sum').value =add(addNumber1, addNumber2);
+document.querySelector("#addnumbers").addEventListener('click', addNumbers);
 /* Function Expression - Subtract Numbers */
 
 
