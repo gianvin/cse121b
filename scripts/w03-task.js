@@ -71,5 +71,5 @@ numbersArray.map(number => number * 2);
 
 /* Output Sum of Multiplied by 2 Array */
 const doubledNumbers = numbersArray.map((number) => number * 2);
-const sum = doubledNumbers.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
-console.log(sum);
+const sumOfMultiplied = doubledNumbers.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+console.log(sumOfMultiplied);
