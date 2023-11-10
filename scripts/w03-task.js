@@ -64,7 +64,12 @@ numbersArray.sort(function(a, b){
     }
 })
 /* Output Sum of Org. Array */
+numbersArray.reduce((sum, number) => sum + number);
 
 /* Output Multiplied by 2 Array */
+numbersArray.map(number => number * 2);
 
 /* Output Sum of Multiplied by 2 Array */
+const doubledNumbers = numbersArray.map((number) => number * 2);
+const sum = doubledNumbers.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+console.log(sum);
