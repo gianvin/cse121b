@@ -30,8 +30,18 @@ let divideNumber1 = Number(document.querySelector('#divide1').value);
 document.querySelector('#quotient').value = divide(divideNumber1, divideNumber2);
 document.querySelector('#divideNumbers').addEventListener('click', divideNumbers);
 /* Decision Structure */
+getTotalButton.addEventListener("click", function(){
+    const subtotalValue = parseFloat(subtotalInput.value);
+})
+const applyDiscount = membership.checked;
+let totalDue;
+if (applyDiscount) {
+    totalDue = subtotalValue * 0.85;
+}else{
+    totalDue = subtotalValue;
+}
 
-
+totalDueValue.textContent = 'Total Due: $(totalDue.toFixed(2)';
 /* ARRAY METHODS - Functional Programming */
 let numbersArray = [1,2,3,4,5,6,7,8,9,10,11,12,13];
 /* Output Source Array */
