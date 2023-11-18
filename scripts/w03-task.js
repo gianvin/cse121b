@@ -38,56 +38,41 @@ let divisor = Number(document.querySelector('#divide1').value);
 document.querySelector('#quotient').value = divide(dividend, divisor);})
 
 /* Decision Structure */
+const getTotalButton = document.getElementById("getTotalButton");
+const subtotalInput = document.getElementById("subtotalInput");
+const membership = document.getElementById("membership");
+const totalDueValue = document.getElementById("totalDueValue");
 getTotalButton.addEventListener("click", function(){
     const subtotalValue = parseFloat(subtotalInput.value);
-})
-const applyDiscount = membership.checked;
-let totalDue;
+    const applyDiscount =membership.checked;
+    let totalDue;
+
 if (applyDiscount) {
     totalDue = subtotalValue * 0.85;
 }else{
     totalDue = subtotalValue;
 }
 
-totalDueValue.textContent = 'Total Due: $(totalDue.toFixed(2)';
+totalDueValue.textContent = 'Total Due: $${totalDue.toFixed(2)}';})
 /* ARRAY METHODS - Functional Programming */
 let numbersArray = [1,2,3,4,5,6,7,8,9,10,11,12,13];
 /* Output Source Array */
 let arrayElement = document.getElementById("Array");
 arrayElement.innerHTML = numbersArray.join(', ')
+console.log(numbersArray);
 /* Output Odds Only Array */
-numbersArray.sort(function(a, b){
-    const isOdd = num => num % 2 === 1;
-    if (isOdd(a) && isOdd(b)) {
-        return a - b;
-    }   else if (isOdd(a)) {
-        return -1;
-    }   else if (isOdd(b)) {
-        return 1;
-    }   else {
-        return a - b;
-    }
-})
+const oddsArray = numberArray.filter(num => num % 2 === 1);
+console.log(oddsArray);
 /* Output Evens Only Array */
-numbersArray.sort(function(a, b){
-    const isEven = num => num % 2 === 1;
-    if (isEven(a) && isEven(b)) {
-        return a - b;
-    }   else if (isEven(a)) {
-        return -1;
-    }   else if (isEven(b)) {
-        return 1;
-    }   else {
-        return a - b;
-    }
-})
+const evensArray = numberArray.filter(num => num % 2 === 0);
+console.log(evensArray);
 /* Output Sum of Org. Array */
-numbersArray.reduce((sum, number) => sum + number);
+const sumOfArray = numbersArray.reduce((sum, number) => sum + number, 0);
+console.log(sumOfArray);
 
 /* Output Multiplied by 2 Array */
-numbersArray.map(number => number * 2);
-
+const multipliedBy2Array =numbersArray.map(number => number * 2);
+console.log(multipliedBy2Array);
 /* Output Sum of Multiplied by 2 Array */
-const doubledNumbers = numbersArray.map((number) => number * 2);
-const sumOfMultiplied = doubledNumbers.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+const sumOfMultiplied  = multipliedBy2Arraay.reduce((sum, number) => sum + number, 0);
 console.log(sumOfMultiplied);
