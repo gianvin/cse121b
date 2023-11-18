@@ -5,30 +5,38 @@
 function add (number1, number2){
     return number1 + number2;
 }
+document.querySelector("#addNumbers").addEventListener('click', function (){
 let addNumber1 = Number(document.querySelector('#add1').value);
-document.querySelector('#sum').value = add(addNumber1, addNumber2);
-document.querySelector("#addNumbers").addEventListener('click', addNumbers);
+let addNumber2 = Number(document.querySelector('#add2').value);
+document.querySelector('#sum').value = add(addNumber1, addNumber2);})
+
 /* Function Expression - Subtract Numbers */
 function subtract (subtract1, subtract2){
     return subtract1 -subtract2;
 }
+document.querySelector('#subtractNumbers').addEventListener('click', function(){
 let subtractNumber1 = Number(document.querySelector('#subtract1').value);
-document.querySelector('#difference').value = subtract(subtractNumber1, subtractNumber2);
-document.querySelector('#subtractNumbers').addEventListener('click', subtractNumbers);
+let subtractNumber2 = Number(document.querySelector('#subtract2').value);
+document.querySelector('#difference').value = subtract(subtractNumber1, subtractNumber2);})
+
 /* Arrow Function - Multiply Numbers */
 function multiply (factor1, factor2){
     return factor1 * factor2;
 }
-let multiplyNumber1 = Number(document.querySelector('#multiply1').value);
-document.querySelector('#product').value = multiply(multiplyNumber1, multiplyNumber2);
-document.querySelector('#multiplyNumbers').addEventListener('click', multiplyNumbers);
+document.querySelector('#multiplyNumbers').addEventListener('click', function(){
+let factor1 = Number(document.querySelector('#multiply1').value);
+let factor2 = Number(document.querySelector('#multiply2').value);
+document.querySelector('#product').value = multiply(factor1, factor2);})
+
 /* Open Function Use - Divide Numbers */
 function divide (dividend, divisor){
     return dividend / divisor;
 }
-let divideNumber1 = Number(document.querySelector('#divide1').value);
-document.querySelector('#quotient').value = divide(divideNumber1, divideNumber2);
-document.querySelector('#divideNumbers').addEventListener('click', divideNumbers);
+document.querySelector('#divideNumbers').addEventListener('click', function(){
+let dividend = Number(document.querySelector('#divide1').value);
+let divisor = Number(document.querySelector('#divide1').value);
+document.querySelector('#quotient').value = divide(dividend, divisor);})
+
 /* Decision Structure */
 getTotalButton.addEventListener("click", function(){
     const subtotalValue = parseFloat(subtotalInput.value);
