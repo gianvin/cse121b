@@ -24,8 +24,8 @@ function multiply (factor1, factor2){
     return factor1 * factor2;
 }
 document.querySelector('#multiplyNumbers').addEventListener('click', function(){
-let factor1 = Number(document.querySelector('#multiply1').value);
-let factor2 = Number(document.querySelector('#multiply2').value);
+let factor1 = Number(document.querySelector('#factor1').value);
+let factor2 = Number(document.querySelector('#factor2').value);
 document.querySelector('#product').value = multiply(factor1, factor2);})
 
 /* Open Function Use - Divide Numbers */
@@ -33,46 +33,45 @@ function divide (dividend, divisor){
     return dividend / divisor;
 }
 document.querySelector('#divideNumbers').addEventListener('click', function(){
-let dividend = Number(document.querySelector('#divide1').value);
-let divisor = Number(document.querySelector('#divide1').value);
+let dividend = Number(document.querySelector('#dividend').value);
+let divisor = Number(document.querySelector('#divisor').value);
 document.querySelector('#quotient').value = divide(dividend, divisor);})
 
 /* Decision Structure */
-const getTotalButton = document.getElementById("getTotalButton");
-const subtotalInput = document.getElementById("subtotalInput");
-const membership = document.getElementById("membership");
-const totalDueValue = document.getElementById("totalDueValue");
-getTotalButton.addEventListener("click", function(){
-    const subtotalValue = parseFloat(subtotalInput.value);
-    const applyDiscount =membership.checked;
-    let totalDue;
+const getTotal = function () {
+    let subtotal = Number(document.querySelector('#subtotal').value);
+    if (document.getElementById)('member').checked; { 
+        subtotal *= .85
+    }
+    document.querySelector('#total').textContent = `$ ${subtotal.toFixed(2)}`;
 
-if (applyDiscount) {
-    totalDue = subtotalValue * 0.85;
-}else{
-    totalDue = subtotalValue;
+}
+document.querySelector('#getTotal').addEventListener('click', getTotal);
+ 
+/* ARRAY METHODS - Functional Programming */
+/* Output Source Array */
+let numbersArray = [1,2,3,4,5,6,7,8,9,10,11,12,13];
+document.querySelector('#array').textContent = numbersArray;
+/* Output Odds Only Array */
+document.querySelector('#odds').textContent= numbersArray.filter((num) => num % 2 === 1);
+/* Output Evens Only Array */
+document.querySelector('#evens').textContent= numbersArray.filter((num) => num % 2 === 0);
+/* Output Sum of Org. Array */
+document.querySelector('#sumOfArray').textContent = numbersArray.reduce(sumFunction);
+
+function sumFunction(total, num){
+    return total + num;
+}
+/* Output Multiplied by 2 Array */
+document.querySelector('#multiplied').textContent = numbersArray.map(doubleFunction);
+
+function doubleFunction(x){
+    return x*2;
+}
+/* Output Sum of Multiplied by 2 Array */
+document.querySelector('#sumofMultiplied').textContent = numbersArray.map(doubleFunction).reduce(sumFunction);
+
+function doubleFunctionsumFunction(total, num){
+    return 2 * (total + num);
 }
 
-totalDueValue.textContent = 'Total Due: $${totalDue.toFixed(2)}';})
-/* ARRAY METHODS - Functional Programming */
-let numbersArray = [1,2,3,4,5,6,7,8,9,10,11,12,13];
-/* Output Source Array */
-let arrayElement = document.getElementById("Array");
-arrayElement.innerHTML = numbersArray.join(', ')
-console.log(numbersArray);
-/* Output Odds Only Array */
-const oddsArray = numberArray.filter(num => num % 2 === 1);
-console.log(oddsArray);
-/* Output Evens Only Array */
-const evensArray = numberArray.filter(num => num % 2 === 0);
-console.log(evensArray);
-/* Output Sum of Org. Array */
-const sumOfArray = numbersArray.reduce((sum, number) => sum + number, 0);
-console.log(sumOfArray);
-
-/* Output Multiplied by 2 Array */
-const multipliedBy2Array =numbersArray.map(number => number * 2);
-console.log(multipliedBy2Array);
-/* Output Sum of Multiplied by 2 Array */
-const sumOfMultiplied  = multipliedBy2Arraay.reduce((sum, number) => sum + number, 0);
-console.log(sumOfMultiplied);
