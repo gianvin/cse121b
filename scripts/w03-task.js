@@ -69,7 +69,7 @@ function doubleFunction(x){
     return x*2;
 }
 /* Output Sum of Multiplied by 2 Array */
-document.querySelector('#sumofMultiplied').textContent = numbersArray.map(doubleFunction).reduce(sumFunction);
+document.querySelector('#sumOfMultiplied').textContent = numbersArray.map(doubleFunction).reduce(sumFunction);
 
 function doubleFunctionsumFunction(total, num){
     return 2 * (total + num);
