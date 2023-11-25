@@ -53,9 +53,8 @@ photoElement.alt = myProfile.name;
 });
 
 /* Hobbies List */
-    myProfile.hobbies.forEach(function(hobbies) { 
+    myProfile.hobbies.forEach(function(hobby){ 
     let hobbiesElement = document.querySelector('#hobbies');
-    
     let liElement = document.createElement('li');
     liElement.textContent =hobby;
     hobbiesElement.appendChild(liElement);
