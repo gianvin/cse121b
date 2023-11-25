@@ -45,26 +45,24 @@ let photoElement = document.querySelector('#photo');
 photoElement.src = myProfile.photo;
 photoElement.alt = myProfile.name;
 /* Favorite Foods List*/
-function addFavoriteFoods(myProfile){
     myProfile.favoriteFoods.forEach(function(food) {
     let foodElement = document.querySelector('#favorite-foods');
     let liElement = document.createElement('li');
     liElement.textContent = food;
     foodElement.appendChild(liElement);
 });
-}
+
 /* Hobbies List */
-function addHobbies(myProfile){
-    myProfile.hobbies.forEach(function(hobbies) {
+    myProfile.hobbies.forEach(function(hobbies) { 
     let hobbiesElement = document.querySelector('#hobbies');
+    
     let liElement = document.createElement('li');
     liElement.textContent =hobby;
     hobbiesElement.appendChild(liElement);
 });
-}
+
 
 /* Places Lived DataList */
-function addPlacesLived(myProfile){
 myProfile.placesLived.forEach(place => {
     let dt = document.createElement('dt');
     dt.textContent = place.place;
@@ -73,9 +71,6 @@ myProfile.placesLived.forEach(place => {
     document.querySelector('#places-lived').appendChild(dt);
     document.querySelector('#places-lived').appendChild(dd);
 });
-}
-addElementsToList('#favorite-foods', myProfile.favoriteFoods);
-addElementsToList('#hobbies',myProfile.hobbies);
-addDtDdToList('#places-lived',myProfile.placesLived);
+
 
 
