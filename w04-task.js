@@ -5,11 +5,12 @@ let myProfile = {
     name: "Gina S. Ong",
     photo: "images/Gina Ong Photo.jpg",
     favoriteFoods: [
-        'Rice',
-        'Pasta',
+        'Carbonara',
         'Kare-kare',
-        'Pansit',
-        'Fresh Lumpia'
+        'Adobo',
+        'Sizzling Steak',
+        'Fresh Lumpia',
+        'Ramen'
     ],
     hobbies: [
         'Reading',
@@ -38,19 +39,21 @@ myProfile.placesLived.push(
 
 /* Name */
 document.querySelector('#name').textContent = myProfile.name;
-document.querySelector('#photo').textContent = myProfile.name;
+document.querySelector('#photo').scr = myProfile.name;
 
 /* Photo with attributes */
-document.querySelector('#photo').setAttributeNS('src', myProfile.photo);
-document.querySelector('#photo').setAttributeNS('alt', myProfile.photo);
+document.querySelector('#photo').setAttribute('src', myProfile.photo);
+document.querySelector('#photo').setAttribute('alt', myProfile.photo);
 /* Favorite Foods List*/
+function addElement(){
 let foodElement = document.querySelector('#favorite-foods');
 myProfile.favoriteFoods.forEach(function(food){
     let liElement = document.createElement('li');
     liElement.textContent =food;
     foodElement.appendChild(liElement);
-})
+})}
 /* Hobbies List */
+
 let hobbiesElement = document.querySelector('#hobbies');
 myProfile.hobbies.forEach(function(hobbies){
     let liElement = document.createElement('li');
