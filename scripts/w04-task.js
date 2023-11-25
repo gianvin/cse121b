@@ -26,42 +26,45 @@ myProfile.placesLived.push(
     {
       place: 'Malabon Metro Manila, Philippines',
       length: '37 years',
-      place1: 'Bulacan. Philippines',
-      length1: '12 years'
+    },
+    {
+      place: 'Bulacan. Philippines',
+      length: '12 years'
     }
   
   );
-  
-
-
 
 /* DOM Manipulation - Output */
 
 /* Name */
 document.querySelector('#name').textContent = myProfile.name;
-document.querySelector('#photo').scr = myProfile.name;
+document.querySelector('#photo').src = myProfile.photo;
 
 /* Photo with attributes */
-document.querySelector('#photo').setAttribute('src', myProfile.photo);
-document.querySelector('#photo').setAttribute('alt', myProfile.photo);
+let photoElement = document.querySelector('#photo');
+photoElement.src = myProfile.photo;
+photoElement.alt = myProfile.name;
 /* Favorite Foods List*/
-function addElement(){
-let foodElement = document.querySelector('#favorite-foods');
-myProfile.favoriteFoods.forEach(function(food){
+function addFavoriteFoods(myProfile){
+    myProfile.favoriteFoods.forEach(function(food) {
+    let foodElement = document.querySelector('#favorite-foods');
     let liElement = document.createElement('li');
-    liElement.textContent =food;
+    liElement.textContent = food;
     foodElement.appendChild(liElement);
-})}
+});
+}
 /* Hobbies List */
-
-let hobbiesElement = document.querySelector('#hobbies');
-myProfile.hobbies.forEach(function(hobbies){
+function addHobbies(myProfile){
+    myProfile.hobbies.forEach(function(hobbies) {
+    let hobbiesElement = document.querySelector('#hobbies');
     let liElement = document.createElement('li');
-    liElement.textContent =hobbies;
-    foodElement.appendChild(liElement);
-})
+    liElement.textContent =hobby;
+    hobbiesElement.appendChild(liElement);
+});
+}
 
 /* Places Lived DataList */
+function addPlacesLived(myProfile){
 myProfile.placesLived.forEach(place => {
     let dt = document.createElement('dt');
     dt.textContent = place.place;
@@ -69,5 +72,10 @@ myProfile.placesLived.forEach(place => {
     dd.textContent = place.length;
     document.querySelector('#places-lived').appendChild(dt);
     document.querySelector('#places-lived').appendChild(dd);
-})
+});
+}
+addElementsToList('#favorite-foods', myProfile.favoriteFoods);
+addElementsToList('#hobbies',myProfile.hobbies);
+addDtDdToList('#places-lived',myProfile.placesLived);
+
 
