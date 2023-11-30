@@ -21,25 +21,20 @@ templesElement.appendChild(articleElement);
 
 
 /* async getTemples Function using fetch()*/
+displayTemples();
+const locationSelect = document.getElementById('locationSelect');
+const notUtahOption = document.createElement('option');
+notUtahOption.value = "notutah";
+notUtahOption.textContent = "Outside of Utah";
+locationSelect.appendChild(notUtahOption);
+console.log(JSON.stringify(templeList)); 
+
 const getTemples = async () => {
-    try{
         const response = await fetch("https://byui-cse.github.io/cse121b-ww-course/resources/temples.json");
-       if (!response.ok){
-        throw new Error('HTTP error! Status: ${response.status}');
-       }
        const templesData = await response.json();
        templeList = templesData;
-       displayTemples();
-       const locationSelect = document.getElementById('locationSelect');
-       const notUtahOption = document.createElement('option');
-       notUtahOption.value = "notutah";
-       notUtahOption.textContent = "Outside of Utah";
-       locationSelect.appendChild(notUtahOption);
-       console.log(JSON.stringify(templeList));   
-}catch (error){
-    console.error('Error fetching temples', error.message);
-}
 };
+        
 
 
 /* reset Function */
