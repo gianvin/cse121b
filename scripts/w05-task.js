@@ -51,8 +51,22 @@ const reset = function(){
 }
 reset();
 /* sortBy Function */
-const sortBy = (property) =>{
-    templeList.sort((a,b) => (a[property] > b[propert]? 1 : -1));
+const sortBy = () =>{
+    const customSort =(a,b) => {
+        const caseOrder = {
+            "Utah": 0,
+            "notutah": 1,
+            "older": 2,
+            " all": 3
+        };
+        const aCase = caseOrder[a.location] || Infinity;
+        const bCase = caseOrder[b.location] || Infinity;
+        if (aCase !==bCase){
+            return aCase - bCase;
+        }
+        return a.templeName.localeCompare(b.templeName);
+    };
+    templeList.sort(customSort);
     reset();
     displayTemples();
 };
