@@ -5,17 +5,19 @@ const templesElement = document.getElementById("temples");
 const templeList = [];
 
 /* async displayTemples Function */
-const displayTemples = () => {
-    templeList.forEach(function(temple){
+const displayTemples = (filteredTemples) => {
+    reset();
+    const templesToDisplay = filteredTemples || templeList;
+   templesToDisplay.forEach(function(temple){
     const articleElement = document.createElement('article');
 const h3Element = document.createElement('h3');
 h3Element.textContent = temple.templeName;
 const imgElement = document.createElement('img');
 imgElement.src = temple.imageUrl;
 imgElement.alt = temple.location;
-articleElement.appendChild(h3Element);
-articleElement.appendChild(imgElement);
-templesElement.appendChild(articleElement);
+templesElement.appendChild(h3);
+templesElement.appendChild(img);
+templesElement.appendChild(article);
 });
 };
 
