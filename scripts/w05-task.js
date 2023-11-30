@@ -32,7 +32,7 @@ const getTemples = async () => {
        displayTemples();
        const locationSelect = document.getElementById('locationSelect');
        const notUtahOption = document.createElement('option');
-       notUtahOption.ariaValueNowalue = "notutah";
+       notUtahOption.value = "notutah";
        notUtahOption.textContent = "Outside of Utah";
        locationSelect.appendChild(notUtahOption);
        console.log(JSON.stringify(templeList));   
