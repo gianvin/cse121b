@@ -73,11 +73,9 @@ const sortBy = () =>{
     displayTemples();
 };
 
-
-
-getTemples();
+   reset();
 
 /* Event Listener */
-document.getElementById("fetchTemplesButton").addEventListener("click", getTemples);
-document.getElementById("sortByLocationButton".addEventListener("click", () => sortBy('location')));
-reset();
+document.querySelector("#sortBy").addEventListener("change", () => {sortBy(templeList)});
+
+getTemples();
