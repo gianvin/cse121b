@@ -6,27 +6,40 @@ const templeList = [];
 
 /* async displayTemples Function */
 const displayTemples = () => {
-    templeList.forEach(function(_temples){
-    })
-}
-const articleElement = document.createElement('article');
+    templeList.forEach(function(temple){
+    const articleElement = document.createElement('article');
 const h3Element = document.createElement('h3');
-h3Element.textContent = templeName;
-const imgElement = document.createElemenet('img');
+h3Element.textContent = temple.templeName;
+const imgElement = document.createElement('img');
 imgElement.src = temple.imageUrl;
 imgElement.alt = temple.location;
 articleElement.appendChild(h3Element);
 articleElement.appendChild(imgElement);
 templesElement.appendChild(articleElement);
+});
+};
 
 
 /* async getTemples Function using fetch()*/
 const getTemples = async () => {
-    const response = await fetch("https://byui-cse.github.io/cse121b-ww-course/resources/temples.json");
-    displayTemples(templeLists);
-    console.log(templeList);   
+    try{
+        const response = await fetch("https://byui-cse.github.io/cse121b-ww-course/resources/temples.json");
+       if (!response.ok){
+        throw new Error('HTTP error! Status: ${response.status}');
+       }
+       const templesData = await response.json();
+       templeList = templesData;
+       displayTemples();
+       const locationSelect = document.getElementById('locationSelect');
+       const notUtahOption = document.createElement('option');
+       notUtahOption.ariaValueNowalue = "notutah";
+       notUtahOption.textContent = "Outside of Utah";
+       locationSelect.appendChild(notUtahOption);
+       console.log(JSON.stringify(templeList));   
+}catch (error){
+    console.error('Error fetching temples', error.message);
 }
-
+};
 
 
 /* reset Function */
@@ -38,9 +51,17 @@ const reset = function(){
 }
 reset();
 /* sortBy Function */
+const sortBy = (property) =>{
+    templeList.sort((a,b) => (a[property] > b[propert]? 1 : -1));
+    reset();
+    displayTemples();
+};
 
 
 
 getTemples();
 
 /* Event Listener */
+document.getElementById("fetchTemplesButton").addEventListener("click", getTemples);
+document.getElementById("sortByLocationButton".addEventListener("click", () => sortBy('location')));
+reset();
