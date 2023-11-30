@@ -52,21 +52,23 @@ const reset = function(){
 reset();
 /* sortBy Function */
 const sortBy = () =>{
-    const customSort =(a,b) => {
-        const caseOrder = {
-            "Utah": 0,
-            "notutah": 1,
-            "older": 2,
-            " all": 3
-        };
-        const aCase = caseOrder[a.location] || Infinity;
-        const bCase = caseOrder[b.location] || Infinity;
-        if (aCase !==bCase){
-            return aCase - bCase;
-        }
-        return a.templeName.localeCompare(b.templeName);
-    };
-    templeList.sort(customSort);
+    reset();
+    const filter = document.getElementById('sortBy').value;
+    
+    switch (filter){
+        case "utah":
+            displayTemples(Utah);
+            break;
+        case "nonutah":
+            displayTemples();
+            break;
+        case "older":
+            displayTemples(new Date(1950, 0, 1));
+            break;
+        case "all":
+            displayTemples(temples);
+            break;
+    }
     reset();
     displayTemples();
 };
