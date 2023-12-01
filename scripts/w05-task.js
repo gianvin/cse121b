@@ -71,6 +71,7 @@ const sortBy = (templeList) =>{
     }
     
 };
+reset();
 
 /* Event Listener */
 document.querySelector("#sortBy").addEventListener("change", () => {sortBy(templeList)});
