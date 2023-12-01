@@ -15,7 +15,7 @@ const displayTemples = (filteredTemples) => {
    h3Element.textContent = temple.templeName;
    const imgElement = document.createElement('img');
    imgElement.src = temple.imageUrl;
-   imgElement.alt = temple.location;
+   imgElement.alt = temple.location
    articleElement.appendChild(h3Element);
    articleElement.appendChild(imgElement);
    templesElement.appendChild(articleElement);
@@ -37,7 +37,9 @@ async function getTemples(){
 
         const img = document.createElement("img")
         img.setAttribute("src", temple.imgageUrl);
+        img.setAttribute("alt", temple.location);
         templeDiv.appendChild(img);
+       
     });
 
 }
@@ -49,7 +51,7 @@ const reset = function(){
     })
 }
 /* sortBy Function */
-const sortBy = () =>{
+const sortBy = (templeList) =>{
     reset();
     const filter = document.getElementById('sortBy').value;
     
