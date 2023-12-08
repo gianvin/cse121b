@@ -122,24 +122,28 @@
             <section id="section2">
                 <h2>District Enrolment</h2>
                 <div>
-                    <label for="add1">Male:</label>
+                    <label for="districtMale">Male:</label>
+                    <input type="text" id="districtMale" name="districtMale" disabled>
                 </div>   
                 <div>
-                    <label for="add2">Female:</label>
+                    <label for="districtFemale">Female:</label>
+                    <input type="text" id="districtFemale" name="districtFemale" disabled>
                 </div>  
                 <div>
-                    <label for="sum">Total:</label>
-                    <input type="text" id="sum" name="sum" disabled>
+                    <label for="districtTotal">Total:</label>
+                    <input type="text" id="districtTotal" name="districtTotal" disabled>
                 </div> 
             </section> 
         </div> 
-    </main>  
-</footer>
+    </main>
+    <footer>
+        &copy;<span id="year"></span> | Final Project | CSE 121b 
+    </footer>
 <script src="scripts/project.js"></script>
 <script>
   document.getElementById("year").innerHTML = new Date().getFullYear();
 </script>
-<script src="scripts/profile.js"></script>   
+<script src="scripts/data.js"></script>   
     
 </body>
 </html>
