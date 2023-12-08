@@ -1,7 +1,7 @@
 /*variables*/
 const districtName = "Malabon IV Elementary Schools";
 const currentYear = new Date().getFullYear();
-const profilePicture= "images/distict4.jpg";
+const profilePicture= "images/district4.jpg";
 
 /*element variables*/
 const nameElement = document.getElementById("name");
