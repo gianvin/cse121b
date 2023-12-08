@@ -1,6 +1,6 @@
 /*Profile Object*/
 let districtProfile = {
-    district: "Malabon Iv Elementary Schools",
+    district: "Malabon IV Elementary Schools",
     logo: "images/district4.jpg",
     schools: [
         'Guillermo S. Sanchez Memorial Elementary School',
@@ -72,9 +72,9 @@ districtProfile.schoolHeads.forEach(function(schoolHead){
 /* SuperVisors for the Last Five Years Data List*/
 districtProfile.supervisorsAssigned.forEach(supervisor =>{
     let dt = document.createElement('dt');
-    ds.textContent = name.name;
+    ds.textContent = supervisor.name;
     let dd = document.createElement('dd');
-    sy.textContent =name.year;
+    sy.textContent =supervisor.year;
     document.querySelector('#supervisors-assigned').appendChild(dt);
     document.querySelector('#supervisors-assigned').appendChild(dd);
 });

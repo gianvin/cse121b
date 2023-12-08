@@ -25,7 +25,7 @@ schools.forEach(function(schoolName) {
     schoolListElement.appendChild(listItem);
 });
 
-schoolElement.appendChild(schoolListElement);
+document.getElementById('school').appendChild(schoolListElement);
 const anotherSchool = "Tugatog National High School";
 schools.push(anotherSchool);
 schools.shift();

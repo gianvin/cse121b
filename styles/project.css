@@ -133,7 +133,109 @@ footer {
     position: fixed;
     bottom: 0;
 }
+/* Class Selectors */
+.active {
+    border-bottom: 1px solid yellow;
+}
 
+.open li {
+    display: block;
+}
+
+.block {
+    display: block;
+}
+
+.larger {
+    font-size: larger;
+    color: red;
+}
+
+.right {
+    width: 100%;
+    text-align: right;
+}
+
+.middle {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap: 1rem;
+}
+
+
+/* ID Selectors */
+
+#home {
+    margin-top: 125px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+#section1 {
+    background-color: rgb(225, 250, 225, .5);
+}
+
+#section2 {
+    background-color: rgba(200, 200, 250, 0.5);
+
+}
+
+#section2 div {
+    margin-bottom: 1rem;
+}
+
+#section3 {
+    background-color: rgb(250, 225, 250, .5);
+}
+/*Additional Styles for Profile.html/
+/*header Styles*/
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+/* Logo styles*/
+#logo {
+    width: 120px;
+    height: auto;
+}
+
+/*District name styles */
+#name{
+    font-size: 1.5 rem;
+    color: #333;
+
+}
+/* school list styles */
+#elementary-schools {
+    list-style-type: square;
+    margin-left: 20px;
+}
+/* School head list styles */
+#principal {
+    list-style-type: circles;
+    margin-left: 20px;
+
+}
+#supervisors-assigned {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
 /* Media Queries */
 @media only screen and (min-width: 32.5em) {
     nav ul {
