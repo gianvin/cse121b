@@ -9,7 +9,7 @@ const logoElement = document.getElementById("img");
 
 /*adding Content*/
 nameElement.innerHTML = `<string>${districtName}<string>`;
-logoElement.setAttribute('src',districtLogo);
+logoElement.setAttribute('src', districtLogo);
 const altText = `District Logo  of ${districtName}`;
 logoElement.setAttribute("alt", altText);
 
