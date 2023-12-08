@@ -1,7 +1,7 @@
 /*variables*/
 const districtName = "Malabon IV Elementary Schools";
 const currentYear = new Date().getFullYear();
-const profilePicture= "images/district4.jpg";
+const districtLogo= "images/district4.jpg";
 
 /*element variables*/
 const nameElement = document.getElementById("name");
@@ -12,7 +12,7 @@ const imageElement = document.getElementById("img");
 /*adding Content*/
 nameElement.innerHTML = `<string>${districtName}<string>`;
 yearElement.textContent = currentYear;
-imageElement.setAttribute('src', profilePicture);
+imageElement.setAttribute('src', districtLogo);
 const altText = `District Logo  of ${districtName}`;
 imageElement.setAttribute("alt", altText);
 
@@ -26,10 +26,3 @@ schools.forEach(function(schoolName) {
 });
 
 document.getElementById('school').appendChild(schoolListElement);
-const anotherSchool = "Tugatog National High School";
-schools.push(anotherSchool);
-schools.shift();
-schoolElement.innerHTML += `<br>${schools}`;
-schoolElement.innerHTML += `<br>${schools}`;
-schools.pop();
-schoolElement.innerHTML += `<br>${schools}`;

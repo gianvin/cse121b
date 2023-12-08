@@ -72,9 +72,9 @@ districtProfile.schoolHeads.forEach(function(schoolHead){
 /* SuperVisors for the Last Five Years Data List*/
 districtProfile.supervisorsAssigned.forEach(supervisor =>{
     let dt = document.createElement('dt');
-    ds.textContent = supervisor.name;
+    dt.textContent = supervisor.name;
     let dd = document.createElement('dd');
-    sy.textContent =supervisor.year;
+    dd.textContent =supervisor.year;
     document.querySelector('#supervisors-assigned').appendChild(dt);
     document.querySelector('#supervisors-assigned').appendChild(dd);
 });
