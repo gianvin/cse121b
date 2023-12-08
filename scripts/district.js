@@ -22,4 +22,4 @@ schools.push(anotherSchool);
 schoolElement.innerHTML += `<br>${schools}`;
 schoolElement.innerHTML += `<br>${schools}`;
 schools.pop();
-schoolElement.innerHTML += `<br>${favoriteFoods}`;
+schoolElement.innerHTML += `<br>${schools}`;
