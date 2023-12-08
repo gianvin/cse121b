@@ -6,7 +6,7 @@
     <title>District Profile</title>
 </head>
 <body>
-    <link rel="preconnect" href="https://fonts.goggleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap"
     rel="stylesheet">
@@ -15,6 +15,7 @@
 <body>
     <nav>
         <ul id="menu">
+            <li><a id = "toggleMenu"> &equiv;</a></li>
             <li><a href="project.html" class="active">Home</a></li>
             <li><a href="profile.html">District Profile</a></li>
             <li><a href="data.html">District Enrolment Data S.Y. 2023-2024</a></li>
@@ -23,7 +24,7 @@
     </nav>
     <main id="home">
         <picture>
-          <img id="photo" src="images/placeholder.png" alt="Placeholder Image">
+          <img id="logo" src="images/district4.jpg" alt="img">
         </picture>
         <section>
             <h1>About the District<br>• &nbsp;<span id="name"></span>&nbsp; •</h1>
@@ -35,6 +36,14 @@
             <dl id="supervisors-assigned"></dl>
           </section>
         </main>
+        <footer>
+            &copy;<span id="year"></span> | Final Project | CSE 121b
+          </footer>
+          <script src="scripts/project.js"></script>
+          <script>
+            document.getElementById("year").innerHTML = new Date().getFullYear();
+  </script>
+  <script src="scripts/profile.js"></script>
 </body>
 </html>
 </body>
