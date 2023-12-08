@@ -1,12 +1,15 @@
 /*Enrolment by School*/
 document.addEventListener("DOMContentLoaded", function(){
-    const addButton =document.querySelectorAll("#addNumbers");
+    const addButtons = document.querySelectorAll("#addNumbers");
 
-    addButton.forEach(function (button){
-        const article = button.closest("article");
-        const maleInput = article.querySelector("input[name='add1']");
-        const femaleInput = article.querySelector("input[name='add2'");
-        const sumInput = article.querySelector("input[name='sum]");
+    addButtons.forEach(function (button){
+        button.addEventListener("click", function(){
+            const article = button.closest("article");
+            const maleInput = article.querySelector("input[name='add1']");
+            const femaleInput = article.querySelector("input[name='add2'");
+            const sumInput = article.querySelector("input[name='sum]");
+        
+        
 
         /* Ensure that the inputs are numbers*/
         const maleValue = parseFloat(maleInput.value) || 0;
@@ -20,11 +23,15 @@ document.addEventListener("DOMContentLoaded", function(){
         updateDistrictTotals();
     });
 });
+});
+
+
 
 /*function to update district totals*/
-function updateDistricTotals() {
+function updateDistrictTotals() {
     const districtMaleTotal = calculateTotal("input[name='add1']");
     const districtFemaleTotal = calculateTotal("input[name='add2']");
+    const districtTotal = districtMaleTotal + districtFemaleTotal;
 
     document.getElementById("districtMale").value = districtMaleTotal;
     document.getElementById("districtFemale").value = districtFemaleTotal;
@@ -34,7 +41,7 @@ function updateDistricTotals() {
 /* Function to calculate total based on input name*/
 function calculateTotal(inputName){
     const inputs = document.querySelectorAll(inputName);
-    total = 0;
+    let total = 0;
 
     inputs.forEach(function (input){
         total += parseFloat(input.value) || 0;
