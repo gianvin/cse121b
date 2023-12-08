@@ -17,10 +17,16 @@ const altText = `District Logo  of ${districtName}`;
 imageElement.setAttribute("alt", altText);
 
 /*Array*/
-const schools = ["Guillermo S. Sanchez Memorial Elementary School", "Potrero Elementary School I", "Bagong Lote Elementary School", "Tinajeros Elementary School"];
-const schoolList = schools.join(",");
-schoolElement.textContent = `${schoolList}`;
-const anotherSchool = "Potrero Elementary School Main";
+const schools = ["Guillermo S. Sanchez Memorial Elementary School", "Potrero Elementary School I", "Bagong Lote Elementary School", "PotreroElementary School Main", "Tinajeros Elementary School"];
+const schoolListElement = document.createElement("ul");
+schools.forEach(function(schoolName) {
+    const listItem = document.createElement("li");
+    listItem.textContent = schoolName;
+    schoolListElement.appendChild(listItem);
+});
+
+schoolElement.appendChild(schoolListElement);
+const anotherSchool = "Tugatog National High School";
 schools.push(anotherSchool);
 schools.shift();
 schoolElement.innerHTML += `<br>${schools}`;
