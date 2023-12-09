@@ -50,22 +50,22 @@ const reset = function(){
     })
 }
 /* sortBy Function */
-const sortBy = (schoolList) =>{
+const sortBy = () =>{
     reset();
     const filter = document.getElementById('sortBy').value;
     
     switch (filter){
         case "gssmes":
-        displaySchools(schoolList.filter (school => school.name=== "Guillermo S. Sanchez Memorrial Elementary School"));
+        displaySchools(schoolList.filter (school => school.schoolName=== "Guillermo S. Sanchez Memorrial Elementary School"));
             break;
         case "pes1":
-            displaySchools(schoolList.filter(school => school.name === "PotreroElementary School 1"));
+            displaySchools(schoolList.filter(school => school.schoolName === "PotreroElementary School 1"));
             break;
         case "pes":
-            displaySchools(schoolList.filter(school => school.name === "PotreroElementary School Main"));
+            displaySchools(schoolList.filter(school => school.schoolName === "PotreroElementary School Main"));
         break;
         case "tes":
-            displaySchools(schoolList.filter(school => school.name === "Tinajeros Elementary School"));
+            displaySchools(schoolList.filter(school => school.schoolName === "Tinajeros Elementary School"));
         break;
         case "all":
             displaySchools(schoolList);
@@ -76,6 +76,7 @@ const sortBy = (schoolList) =>{
 reset();
 
 /* Event Listener */
-document.querySelector("#sortBy").addEventListener("change", () => {sortBy(schoolList)});
+const sortByElement = document.querySelector("#sortBy");
+sortByElement.addEventListener("change", sortBy);
 
 getSchools();
