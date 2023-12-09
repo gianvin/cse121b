@@ -2,29 +2,29 @@
  {  "school": "Guillermo S. Sanchez Memorial School",
     "address": "La Trinidad Subdivision, Tinajeros Malabon City, Phippines",
     "school head": "Maria Helez V. Tiamzon",
-    "logo": "https://drive.google.com/file/d/1eEMaP1K0-Q_opymLzeTVemdyzrBsu5Qi/view?usp=sharing"
+    "logo": "https://gianvin.github.io/cse121b/images/gssmes.jpg"
  },
  {  "school": "Potrero Elementary School - I",
     "address": "Dunwoody St., University Hills Subdivision Potrero Malabon City, Philippines",
     "school head": "Dr. Anna Grace V. Vergara",
-    "logo": "https://drive.google.com/file/d/1nLKuW0uKafIBF-1ky-tCv-45VtiFilF8/view?usp=sharing"
+    "logo": "https://gianvin.github.io/cse121b/images/potreroes1.jpg"
  },
 {
     "school": "Bagong Lote Elementary School",
     "address": "81 Bagong Lote St., Potrero Malabon City, Philippines",
     "school head": "Romarico P. Lopez",
-    "logo": "https://drive.google.com/file/d/1TlUC9R13KdY4Z2FSJtt1JkojcB9310H9/view?usp=sharing"
+    "logo": "https://gianvin.github.io/cse121b/images/bagonglotees.jpg"
 },
 {
-    "school": "Potrero Elementary School",
+    "school": "Potrero Elementary School Main",
     "address": "Pinagtipunan Circle Potrero Malabon City, Philippines",
     "school head": "Vicente B. Vicente",
-    "logo": "https://drive.google.com/file/d/1_SXeUixhINtAWXoJ0aROkiIyZWlnc4Pa/view?usp=sharing"
+    "logo": "https://gianvin.github.io/cse121b/images/potreroesmain.png"
 },
 {
     "school": "Tinajeros Elementary School",
     "address": "8 Rivera St., Tinajeros Malabon City Philippines",
     "school head": "Melinda C. San Pedro",
-    "logo": "https://drive.google.com/file/d/1otWY_GmC8cTUWUDsgTAFc88Alu3vkRJ2/view?usp=sharing"
+    "logo": "https://gianvin.github.io/cse121b/images/tinajeroses.jpg"
 }
 ]
