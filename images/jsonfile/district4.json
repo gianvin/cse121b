@@ -1,28 +1,28 @@
 [
- {  "school": "Guillermo S. Sanchez Memorial School",
+ {  "name": "Guillermo S. Sanchez Memorial School",
     "address": "La Trinidad Subdivision, Tinajeros Malabon City, Phippines",
     "school head": "Maria Helez V. Tiamzon",
     "logo": "https://gianvin.github.io/cse121b/images/gssmes.jpg"
  },
- {  "school": "Potrero Elementary School - I",
+ {  "name": "Potrero Elementary School - I",
     "address": "Dunwoody St., University Hills Subdivision Potrero Malabon City, Philippines",
     "school head": "Dr. Anna Grace V. Vergara",
     "logo": "https://gianvin.github.io/cse121b/images/potreroes1.jpg"
  },
 {
-    "school": "Bagong Lote Elementary School",
+    "name": "Bagong Lote Elementary School",
     "address": "81 Bagong Lote St., Potrero Malabon City, Philippines",
     "school head": "Romarico P. Lopez",
     "logo": "https://gianvin.github.io/cse121b/images/bagonglotees.jpg"
 },
 {
-    "school": "Potrero Elementary School Main",
+    "name": "Potrero Elementary School Main",
     "address": "Pinagtipunan Circle Potrero Malabon City, Philippines",
     "school head": "Vicente B. Vicente",
     "logo": "https://gianvin.github.io/cse121b/images/potreroesmain.png"
 },
 {
-    "school": "Tinajeros Elementary School",
+    "name": "Tinajeros Elementary School",
     "address": "8 Rivera St., Tinajeros Malabon City Philippines",
     "school head": "Melinda C. San Pedro",
     "logo": "https://gianvin.github.io/cse121b/images/tinajeroses.jpg"

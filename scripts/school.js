@@ -50,7 +50,7 @@ const reset = function(){
     })
 }
 /* sortBy Function */
-const sortBy = () =>{
+const sortBy = (schoolList) =>{
     reset();
     const filter = document.getElementById('sortBy').value;
     
@@ -73,10 +73,8 @@ const sortBy = () =>{
     }
     
 };
-reset();
+//reset();
 
 /* Event Listener */
-const sortByElement = document.querySelector("#sortBy");
-sortByElement.addEventListener("change", sortBy);
-
+document.querySelector("#sortBy").addEventListener("change", sortBy);
 getSchools();
