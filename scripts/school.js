@@ -20,7 +20,7 @@ const displaySchools = (filteredSchools) =>{
 }
 
 /*async get schoolss using fetch */
-async function getTemples(){
+async function getSchools(){
     const response = await fetch(" https://gianvin.github.io/cse121b/images/jsonfile/district4.json");
     const data = await response.json();
     schoolList = data;
@@ -28,13 +28,16 @@ async function getTemples(){
     const schoolDiv = document.getElementById("schools")
     schoolList.forEach(school => {
         const article = document.createElement("article");
-        article.textContent = school.schoolName;
-        schoolDiv.appendChild(article);
-
+        const h3Element = document.createElement("h3");
+        h3Element.textContent = school.schoolName;
         const img = document.createElement("img")
-        img.setAttribute("src", school.imgageUrl);
+        img.setAttribute("src", school.imageUrl);
         img.setAttribute("alt", school.address);
-        schoolDiv.appendChild(img);
+       
+        article.appendChild(h3Element);
+        article.appendChild(img);
+        
+        schoolDiv.appendChild(article);
        
     });
 
