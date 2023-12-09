@@ -9,7 +9,7 @@ document.querySelector("#addNumbers1").addEventListener('click', function (){
     let addNumber2 = Number(document.querySelector('#add2_school1').value);
     document.querySelector('#sum1').value = add(addNumber1, addNumber2);})
  /*Update District Totals*/
- updateDistrictTotals();
+ updateDistrictTotal();
 
 
     /*function for school2*/
@@ -22,7 +22,7 @@ document.querySelector("#addNumbers2").addEventListener('click', function (){
     document.querySelector('#sum2').value = add(addNumber1, addNumber2);})
 
 /*Update District Totals*/
-updateDistrictTotals();
+updateDistrictTotal();
 
     /*function for school3*/
 function add (number1, number2){
@@ -34,7 +34,7 @@ document.querySelector("#addNumbers3").addEventListener('click', function (){
     document.querySelector('#sum3').value = add(addNumber1, addNumber2);})
 
 /*Update District Totals*/
-updateDistrictTotals();
+updateDistrictTotal();
 
     /*function for school4*/
 function add (number1, number2){
@@ -46,7 +46,7 @@ document.querySelector("#addNumbers4").addEventListener('click', function (){
     document.querySelector('#sum4').value = add(addNumber1, addNumber2);})
 
     /*Update District Totals*/
- updateDistrictTotals();
+ updateDistrictTotal();
 
     /*function for school5*/
 function add (number1, number2){
@@ -58,17 +58,17 @@ document.querySelector("#addNumbers5").addEventListener('click', function (){
     document.querySelector('#sum5').value = add(addNumber1, addNumber2);})
  
 /*Update District Totals*/
- updateDistrictTotals();
+ updateDistrictTotal();
 
  
 /*function to update district totals*/
-function updateDistrictTotals() {
+function updateDistrictTotal() {
     const districtMaleTotal = calculateTotal("input[name='add1']");
     const districtFemaleTotal = calculateTotal("input[name='add2']");
     const districtTotal = districtMaleTotal + districtFemaleTotal;
 
-    document.getElementById("districtMale").value = districtMaleTotal;
-    document.getElementById("districtFemale").value = districtFemaleTotal;
+    document.getElementById("districtMaleTotal").value = districtMaleTotal;
+    document.getElementById("districtFemaleTotal").value = districtFemaleTotal;
     document.getElementById("districtTotal").value = districtTotal;
 }
 /* Function to calculate total based on input name*/

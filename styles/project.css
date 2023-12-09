@@ -279,6 +279,48 @@ main {
 h1 {
     margin-bottom: 20px;
 }
+
+#sortBy {
+    display: flex;
+    padding: 1 rem;
+    background-color: #eee;
+    color: #444;
+    font-weight: 700;
+    margin: 1 rem auto;
+    width: 150px;
+    border: ipx solid rgba(0, 0, 0, .2);
+    text-align: center;
+    appearance: none;
+}
+#sortBy option:disabled {
+    font-style: italic;
+    padding: 1.5rem;
+    background-color: #111;
+    color: #ccc
+}
+#schools{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 1rem;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+#schools article {
+    height: 250 px;
+    margin: 1rem;
+    border: 1px solid rgba(0, 0, 0, .1);
+    padding: 1rem;
+    background-color: #eee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#schools img {
+    width: 250px;
+    height: auto;
+    box-shadow: 0 0 30px #777;
+    margin: 1ren;
+}
 /* Media Queries */
 @media only screen and (min-width: 32.5em) {
     nav ul {
@@ -305,11 +347,13 @@ h1 {
     }
     #schoolsenrolmentdata{
         display: grid;  
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-columns: 1fr 1fr;
         grid-gap: 10px;
         margin: 0 auto;
         max-width: 950 px;
     }
+
+
    
 
 }

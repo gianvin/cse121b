@@ -25,6 +25,7 @@ async function getSchools(){
     const data = await response.json();
     schoolList = data;
 
+
     const schoolDiv = document.getElementById("schools")
     schoolList.forEach(school => {
         const article = document.createElement("article");
@@ -56,13 +57,16 @@ const sortBy = (schoolList) =>{
     
     switch (filter){
         case "gssmes":
-        displaySchools(schoolList.filter (school => school.schoolName=== "Guillermo S. Sanchez Memorrial Elementary School"));
+        displaySchools(schoolList.filter (school => school.schoolName=== "Guillermo S. Sanchez Memorial Elementary School"));
             break;
         case "pes1":
-            displaySchools(schoolList.filter(school => school.schoolName === "PotreroElementary School 1"));
+            displaySchools(schoolList.filter(school => school.schoolName === "Potrero Elementary School I"));
+            break;
+        case "bles":
+            displaySchools(schoolList.filter(school => school.schoolName === "Bagong Lote Elementary School"));
             break;
         case "pes":
-            displaySchools(schoolList.filter(school => school.schoolName === "PotreroElementary School Main"));
+            displaySchools(schoolList.filter(school => school.schoolName === "Potrero Elementary School Main"));
         break;
         case "tes":
             displaySchools(schoolList.filter(school => school.schoolName === "Tinajeros Elementary School"));
@@ -73,8 +77,9 @@ const sortBy = (schoolList) =>{
     }
     
 };
-//reset();
+reset();
 
 /* Event Listener */
-document.querySelector("#sortBy").addEventListener("change", sortBy);
+document.querySelector("#sortBy").addEventListener("change", () => {sortBy(schoolList)});
+
 getSchools();
