@@ -1,0 +1,78 @@
+/* declare and Initialize Global Variables*/
+const schoolsElement = document.getElementById("schools");
+
+/*async displaySchools Function */
+let schoolList = [];
+const displaySchools = (filteredSchools) =>{
+    reset();
+    const schoolsToDisplay = filteredSchools || schoolList;
+    schoolsToDisplay.forEach(function(school){
+    const articleElement = document.createElement('article');
+    const h3Element = document.createElement('h3');
+    h3Element.textContent = school.schoolName;
+    const imgElement = document.createElement('img');
+    imgElement.src = school.imageUrl;
+    imgElement.alt = school.address;
+    articleElement.appendChild(h3Element);
+    articleElement.appendChild(imgElement);
+    schoolsElement.appendChild(articleElement);
+ });
+}
+
+/*async get schoolss using fetch */
+async function getTemples(){
+    const response = await fetch(" https://gianvin.github.io/cse121b/images/jsonfile/district4.json");
+    const data = await response.json();
+    schoolList = data;
+
+    const schoolDiv = document.getElementById("schools")
+    schoolList.forEach(school => {
+        const article = document.createElement("article");
+        article.textContent = school.schoolName;
+        schoolDiv.appendChild(article);
+
+        const img = document.createElement("img")
+        img.setAttribute("src", school.imgageUrl);
+        img.setAttribute("alt", school.address);
+        schoolDiv.appendChild(img);
+       
+    });
+
+}
+/* reset Function */
+const reset = function(){
+    const articleElements = schoolsElement.querySelectorAll('article');
+    articleElements.forEach(article => {
+        article.remove();
+    })
+}
+/* sortBy Function */
+const sortBy = (schoolList) =>{
+    reset();
+    const filter = document.getElementById('sortBy').value;
+    
+    switch (filter){
+        case "gssmes":
+        displaySchools(schoolList.filter (school => school.name=== "Guillermo S. Sanchez Memorrial Elementary School"));
+            break;
+        case "pes1":
+            displaySchools(schoolList.filter(school => school.name === "PotreroElementary School 1"));
+            break;
+        case "pes":
+            displaySchools(schoolList.filter(school => school.name === "PotreroElementary School Main"));
+        break;
+        case "tes":
+            displaySchools(schoolList.filter(school => school.name === "Tinajeros Elementary School"));
+        break;
+        case "all":
+            displaySchools(schoolList);
+            break;
+    }
+    
+};
+reset();
+
+/* Event Listener */
+document.querySelector("#sortBy").addEventListener("change", () => {sortBy(schoolList)});
+
+getSchools();
