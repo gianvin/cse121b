@@ -321,6 +321,9 @@ h1 {
     box-shadow: 0 0 30px #777;
     margin: 1ren;
 }
+#schoolprofile{
+   margin-top: 80px; 
+}
 /* Media Queries */
 @media only screen and (min-width: 32.5em) {
     nav ul {

@@ -11,7 +11,7 @@ const displaySchools = (filteredSchools) =>{
     const h3Element = document.createElement('h3');
     h3Element.textContent = school.schoolName;
     const imgElement = document.createElement('img');
-    imgElement.src = school.imageUrl;
+    imgElement.src = school.logoUrl;
     imgElement.alt = school.address;
     articleElement.appendChild(h3Element);
     articleElement.appendChild(imgElement);
@@ -32,7 +32,7 @@ async function getSchools(){
         const h3Element = document.createElement("h3");
         h3Element.textContent = school.schoolName;
         const img = document.createElement("img")
-        img.setAttribute("src", school.imageUrl);
+        img.setAttribute("src", school.logoUrl);
         img.setAttribute("alt", school.address);
        
         article.appendChild(h3Element);
